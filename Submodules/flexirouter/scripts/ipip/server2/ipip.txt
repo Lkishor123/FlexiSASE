@@ -1,0 +1,5 @@
+create ipip tunnel src 192.168.31.47 dst 192.168.31.76
+set interface ip address ipip0 10.100.0.6/31
+set interface state ipip0 up
+ip route add 20.20.20.0/24 via ipip0
+

@@ -1,0 +1,9 @@
+make[4]: Entering directory '/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/build-nasm'
+perl -I/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/src-nasm/perllib -I/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/src-nasm tools/mkdep.pl -M Makefile.in -- . include config x86 rdoff stdlib nasmlib output asm disasm x86 common macros
+mkdir -p /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/bin
+/usr/bin/install -c nasm /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/bin/nasm
+/usr/bin/install -c ndisasm /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/bin/ndisasm
+mkdir -p /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/share/man/man1
+/usr/bin/install -c -m 644 /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/src-nasm/nasm.1 /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/share/man/man1/nasm.1
+/usr/bin/install -c -m 644 /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/src-nasm/ndisasm.1 /home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp_debug-native/external/share/man/man1/ndisasm.1
+make[4]: Leaving directory '/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/build-vpp_debug-native/external/build-nasm'

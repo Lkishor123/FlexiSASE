@@ -1,0 +1,13 @@
+prefix=/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp-native/external
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libmlx4
+Description: RDMA Core Userspace Library
+URL: https://github.com/linux-rdma/rdma-core
+Version: 1.0.31.1
+Libs: -L${libdir} -lmlx4 
+Libs.private: -lpthread
+Requires.private: libibverbs
+Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+loopback create mac 1a:ab:3c:4d:5e:7f
+set int mtu 1360 loop0
+set int l2 learn loop0 disable
+
+create gre tunnel src 10.101.0.7 dst 10.101.0.6 teb
+ipsec tunnel protect gre0 sa-in 10 sa-out 20
+set int state gre0 up
+
+create bridge-domain 12 learn 1 forward 1 uu-flood 1 flood 1 arp-term 0
+set int l2 bridge loop0 12 bvi
+set int l2 bridge gre0 12 1

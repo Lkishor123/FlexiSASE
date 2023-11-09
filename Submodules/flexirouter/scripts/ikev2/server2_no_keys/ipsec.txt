@@ -1,0 +1,6 @@
+ikev2 profile add pr1 
+ikev2 profile set pr1 auth shared-key-mic string Vpp123 
+ikev2 profile set pr1 id local fqdn vpp.home 
+ikev2 profile set pr1 id remote fqdn roadwarrior.vpn.example.com 
+ikev2 profile set pr1 traffic-selector remote ip-range 0.0.0.0 - 255.255.255.255 port-range 0 - 65535 protocol 0
+ikev2 profile set pr1 traffic-selector local ip-range 0.0.0.0 - 255.255.255.255 port-range 0 - 65535 protocol 0

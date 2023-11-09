@@ -1,0 +1,9 @@
+make[1]: Entering directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/build-nasm'
+perl -I/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-nasm/perllib -I/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-nasm tools/mkdep.pl -M Makefile.in -- . include config x86 rdoff stdlib nasmlib output asm disasm x86 common macros
+mkdir -p /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/bin
+/usr/bin/install -c nasm /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/bin/nasm
+/usr/bin/install -c ndisasm /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/bin/ndisasm
+mkdir -p /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/share/man/man1
+/usr/bin/install -c -m 644 /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-nasm/nasm.1 /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/share/man/man1/nasm.1
+/usr/bin/install -c -m 644 /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-nasm/ndisasm.1 /home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_install/share/man/man1/ndisasm.1
+make[1]: Leaving directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/build-nasm'

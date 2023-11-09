@@ -1,0 +1,14 @@
+make[1]: Entering directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb'
+make -C lib
+make[2]: Entering directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/lib'
+make -C test
+make[2]: Entering directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/test'
+make -C perf
+make[2]: Entering directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/perf'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb/perf'
+make[1]: Leaving directory '/home/vagrant/flexisase/Submodules/flexirouter/vpp/build/external/_build/src-ipsec-mb'

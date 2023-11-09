@@ -1,0 +1,13 @@
+prefix=/home/vagrant/flexisase/Submodules/flexiroutervpp/build-root/install-vpp-native/external
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libibmad
+Description: RDMA Core Userspace Library
+URL: https://github.com/linux-rdma/rdma-core
+Version: 5.3.31.1
+Libs: -L${libdir} -libmad 
+Libs.private: 
+Requires.private: libibumad
+Cflags: -I${includedir}

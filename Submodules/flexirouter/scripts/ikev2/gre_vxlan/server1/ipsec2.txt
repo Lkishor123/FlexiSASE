@@ -1,0 +1,3 @@
+ikev2 profile set pr1 auth rsa-sig cert-file /home/denys/projects/flexirouter_21_01/flexirouter/scripts/ikev2/gre_vxlan/server1/server-cert.pem
+set ikev2 local key /home/denys/projects/flexirouter_21_01/flexirouter/scripts/ikev2/gre_vxlan/server1/client-key.pem
+
