@@ -1,0 +1,12 @@
+loopback create mac 1a:2b:3c:4d:5e:6f
+create bridge-domain 13 learn 1 forward 1 uu-flood 1 flood 1 arp-term 0
+
+ipsec sa add 10 spi 1000 esp crypto-alg aes-cbc-128 crypto-key 4a506a794f574265564551694d653768 integ-alg sha1-96 integ-key 4339314b55523947594d6d3547666b45764e6a58
+ipsec sa add 20 spi 1001 esp crypto-alg aes-cbc-128 crypto-key 4a506a794f574265564551694d653768 integ-alg sha1-96 integ-key 4339314b55523947594d6d3547666b45764e6a58
+
+create ipsec gre tunnel src 192.168.31.47 dst 192.168.31.76 local-sa 10 remote-sa 20
+
+set int l2 bridge loop0 13 bvi
+set int l2 bridge ipsec-gre0 13
+
+show bridge-domain 13 int

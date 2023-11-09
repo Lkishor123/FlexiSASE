@@ -1,0 +1,4 @@
+set interface unnumbered ipip0 use loop0
+tap-inject map interface loop0 ipip0
+#l3xc add loop0 via ipip0
+

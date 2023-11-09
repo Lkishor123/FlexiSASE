@@ -1,0 +1,6 @@
+loopback create mac 1a:2b:3c:4d:5e:6f
+create bridge-domain 13 learn 1 forward 1 uu-flood 1 flood 1 arp-term 0
+create vxlan tunnel src 192.168.31.47 dst 192.168.31.76 vni 13
+set interface l2 bridge vxlan_tunnel0 13 1
+set interface l2 bridge loop0 13 bvi
+set interface ip table loop0 0

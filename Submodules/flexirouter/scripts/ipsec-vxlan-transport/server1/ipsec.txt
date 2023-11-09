@@ -1,0 +1,13 @@
+ipsec sa add 10 spi 1001 esp crypto-alg aes-cbc-128 crypto-key 4a506a794f574265564551694d653768 integ-alg sha1-96 integ-key 4339314b55523947594d6d3547666b45764e6a58 tunnel-src 10.100.0.7 tunnel-dst 10.100.0.6
+ipsec sa add 20 spi 1000 esp crypto-alg aes-cbc-128 crypto-key 4a506a794f574265564551694d653768 integ-alg sha1-96 integ-key 4339314b55523947594d6d3547666b45764e6a58 tunnel-src 10.100.0.6 tunnel-dst 10.100.0.7
+
+ipsec spd add 1
+set interface ipsec spd loop0 1
+
+ipsec policy add spd 1 priority 100 inbound action bypass protocol 50
+ipsec policy add spd 1 priority 100 outbound action bypass protocol 50
+
+ipsec policy add spd 1 priority 10 outbound action protect sa 10
+ipsec policy add spd 1 priority 10 inbound action protect sa 20
+
+

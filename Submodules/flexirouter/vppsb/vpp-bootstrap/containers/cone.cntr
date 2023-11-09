@@ -1,0 +1,5 @@
+DESC: This container is used for vpp testing with scapy.
+DIST: ubuntu
+VER: trusty
+PACKAGES: python-pip
+PIP: scapy

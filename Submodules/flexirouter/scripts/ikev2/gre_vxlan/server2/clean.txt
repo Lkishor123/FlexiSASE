@@ -1,0 +1,6 @@
+ikev2 profile del pr1
+loopback delete-interface intfc loop0
+loopback delete-interface intfc loop1
+create vxlan tunnel src 192.168.0.123 dst 192.168.0.122 dest_port 4789 vni 13 del
+create bridge-domain 12 learn 1 forward 1 uu-flood 1 flood 1 arp-term 0 del
+create bridge-domain 13 learn 1 forward 1 uu-flood 1 flood 1 arp-term 0 del

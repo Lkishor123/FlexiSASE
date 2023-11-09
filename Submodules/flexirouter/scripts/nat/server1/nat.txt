@@ -1,0 +1,5 @@
+nat44 add interface address GigabitEthernet0/3/0
+nat addr-port-assignment-alg default
+nat44 add static mapping local 192.168.31.76 22 external GigabitEthernet0/3/0 22 tcp
+nat44 forwarding enable
+set interface nat44 in GigabitEthernet0/8/0 out GigabitEthernet0/3/0 output-feature

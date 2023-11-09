@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    config.vm.synced_folder "..", "/home/vagrant/flexisase"
+    config.vm.box = "ubuntu/focal64"
+  
+    config.vm.define :flexisase, autostart: false do |flexisase|
+      flexisase.vm.hostname = "flexisase"
+      flexisase.vm.network "private_network", ip: "192.168.70.202", nic_type: "82540EM"
+      flexisase.vm.network "private_network", ip: "192.168.120.202", nic_type: "82540EM"
+
+      flexisase.vm.provider "virtualbox" do |vb|
+        vb.name = "flexisase"
+        vb.linked_clone = true
+        vb.customize ["modifyvm", :id, "--memory", "6144"]
+        vb.customize ["modifyvm", :id, "--cpus", "4"]
+        vb.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+      end
+    #   flexisase.vm.provision "ansible" do |ansible|
+    #     ansible.host_key_checking = false
+    #     ansible.playbook = "../deploy/deploy.yml"
+    #     ansible.inventory_path = "../deploy/hosts"
+    #     ansible.raw_arguments = ENV.fetch("ANSIBLE_ARGS", "").split(";") +
+    #                             ["--timeout=30"]
+    #     ansible.verbose = 'v'
+    #   end
+    end
+  end

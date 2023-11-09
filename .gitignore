@@ -1,0 +1,8 @@
+artifacts
+.vagrant
+*.tgz
+flexiagent
+fleximanage
+flexiwancharts
+MongoDB
+Mailer

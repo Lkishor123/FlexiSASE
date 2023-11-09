@@ -1,0 +1,20 @@
+ikev2 set logging level 5
+event-logger clear
+
+create ipip tunnel src 192.168.0.123 dst 104.193.146.116
+
+ikev2 profile add pr1
+ikev2 profile set pr1 tunnel ipip0
+ikev2 profile set pr1 auth shared-key-mic string abc243f5621c1a95997997c8cd597956
+ikev2 profile set pr1 id local fqdn b0bbd024d5
+ikev2 profile set pr1 id remote fqdn 104.193.146.116
+ikev2 profile set pr1 traffic-selector local ip-range 0.0.0.0 - 255.255.255.255 port-range 0 - 65535 protocol 0
+ikev2 profile set pr1 traffic-selector remote ip-range 0.0.0.0 - 255.255.255.255 port-range 0 - 65535 protocol 0
+ikev2 profile set pr1 responder GigabitEthernet0/3/0 104.193.146.116
+ikev2 profile set pr1 ike-crypto-alg aes-cbc 256  ike-integ-alg hmac-sha2-256-128  ike-dh modp-2048
+ikev2 profile set pr1 esp-crypto-alg aes-cbc 256  esp-integ-alg hmac-sha2-256-128
+ikev2 profile set pr1 sa-lifetime 3600 10 5 0
+ikev2 initiate sa-init pr1
+
+loopback create
+set int mtu 1360 loop0
